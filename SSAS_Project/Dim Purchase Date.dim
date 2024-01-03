@@ -1,0 +1,280 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2e1bbe0e-27ef-4635-abf5-7ba0d80bff7f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Purchase Date</ID>
+  <Name>Dim Purchase Date</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2097" scrolltop="-3927" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6689" y="10160" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_PurchaseDate" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00000e0e000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_PurchaseDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2097</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3927</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="153">
+            <Shape Id="Purchase DATE" Expanded="false">
+              <Attributes>
+                <Attribute Id="Purchase DATE" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Purchase DAY" Expanded="false">
+              <Attributes>
+                <Attribute Id="Purchase DAY" />
+              </Attributes>
+              <Position x="216" y="20" />
+            </Shape>
+            <Shape Id="Purchase MONTH" Expanded="false">
+              <Attributes>
+                <Attribute Id="Purchase MONTH" />
+              </Attributes>
+              <Position x="412" y="20" />
+            </Shape>
+            <Shape Id="Purchase YEAR" Expanded="false">
+              <Attributes>
+                <Attribute Id="Purchase YEAR" />
+              </Attributes>
+              <Position x="608" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2025239f-d0cd-4c94-8265-3675051ee794">
+    <DataSourceViewID>Online Shop Project</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="50a439f7-9e6b-46cb-b057-3a4d05745cd9">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="39bacb83-cc76-4ca7-bb4f-1dc7ef285f7a">
+      <ID>Purchase DATE</ID>
+      <Name>Purchase DATE</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="72a765fd-ba06-46ab-b323-36217985fb2e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cc36556b-141c-472e-9172-bf0fabefb6af">
+            <TableID>dbo_Dim_PurchaseDate</TableID>
+            <ColumnID>Purchase_DATE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="67001c82-7a81-4a11-9524-c79298063c5c">
+          <AttributeID>Purchase DAY</AttributeID>
+          <Name>Purchase DAY</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="69f00ba7-d660-49e1-94ee-58c860b67ccd">
+      <ID>Purchase DAY</ID>
+      <Name>Purchase DAY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="46ed7bf5-38f9-45fd-95c5-0c3d22c21417">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6558bf83-3ddf-4fca-ae72-2eae46e8833c">
+            <TableID>dbo_Dim_PurchaseDate</TableID>
+            <ColumnID>Purchase_DAY</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="99745ce6-daf4-481d-85a1-ac2dcfeef8b7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ef1abb7d-9408-4718-aeab-b11854229d05">
+            <TableID>dbo_Dim_PurchaseDate</TableID>
+            <ColumnID>Purchase_MONTH</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="384acdb7-76e8-4847-8be9-f27ab20466bf">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="50e9d0d2-38af-49c7-98a7-9855fdeb7b5b">
+            <TableID>dbo_Dim_PurchaseDate</TableID>
+            <ColumnID>Purchase_YEAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1e4f4207-2e28-4e14-82ca-9617428d0cb2">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="69d6f859-a5dc-47e8-8d52-231a1bc910ef">
+          <TableID>dbo_Dim_PurchaseDate</TableID>
+          <ColumnID>Purchase_DAY</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a458f456-3b0e-4b5b-8ca2-faeee7185b7f">
+          <AttributeID>Purchase MONTH</AttributeID>
+          <Name>Purchase MONTH</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="78db4556-fca3-4c39-9d76-27586605afd3">
+      <ID>Purchase MONTH</ID>
+      <Name>Purchase MONTH</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0aa131bd-3a4d-4353-91db-f16fc84346f5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3069419e-0f37-4e76-87b6-1d1f8af6f06e">
+            <TableID>dbo_Dim_PurchaseDate</TableID>
+            <ColumnID>Purchase_MONTH</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="35859f25-9201-48aa-9388-a28b3de6a7e0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="efab8c1b-9f59-4389-93fa-a04a16b030d1">
+            <TableID>dbo_Dim_PurchaseDate</TableID>
+            <ColumnID>Purchase_YEAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="bb0aa354-b7e4-430e-94b1-59a821bd7bb9">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ef8ecc20-f054-47a9-8947-106a8cb0b50a">
+          <TableID>dbo_Dim_PurchaseDate</TableID>
+          <ColumnID>Purchase_MONTH</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="86d86a87-168e-4133-b2dc-6b8fd096073f">
+          <AttributeID>Purchase YEAR</AttributeID>
+          <Name>Purchase YEAR</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7301104c-f7fa-4986-bc60-3ff875679724">
+      <ID>Purchase YEAR</ID>
+      <Name>Purchase YEAR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0f3a8ee2-b517-48eb-a8fa-c8fc5796e363">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64b90456-4763-4375-b679-26c1881cf609">
+            <TableID>dbo_Dim_PurchaseDate</TableID>
+            <ColumnID>Purchase_YEAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="06a1b100-a7b4-4f00-9137-8d0f960a5d46">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="440f2d4a-c693-432c-9ac1-7205f8a90e08">
+          <TableID>dbo_Dim_PurchaseDate</TableID>
+          <ColumnID>Purchase_YEAR</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="aee42058-4a0b-4f6a-adcb-feca19f93e7f">
+      <ID>Hierarchy</ID>
+      <Name>Y_M_D</Name>
+      <Levels>
+        <Level dwd:design-time-name="e0713926-d61d-45f9-a56e-73cd29b98a3b">
+          <ID>Purchase YEAR</ID>
+          <Name>Purchase YEAR</Name>
+          <SourceAttributeID>Purchase YEAR</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="0231a5fb-1d64-4152-94f7-2cda2c07b7a6">
+          <ID>Purchase MONTH</ID>
+          <Name>Purchase MONTH</Name>
+          <SourceAttributeID>Purchase MONTH</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="23144188-f07d-4f14-aa4b-eacac76fae3c">
+          <ID>Purchase DAY</ID>
+          <Name>Purchase DAY</Name>
+          <SourceAttributeID>Purchase DAY</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="f0ae4477-8fd6-4fcb-a4ee-6107f42ef5d6">
+      <ID>Hierarchy 1</ID>
+      <Name>Y_M</Name>
+      <Levels>
+        <Level dwd:design-time-name="85d36da2-b6ca-448b-a6d5-d9d13baed594">
+          <ID>Purchase YEAR</ID>
+          <Name>Purchase YEAR</Name>
+          <SourceAttributeID>Purchase YEAR</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="4255b923-cd1d-4ecf-a1c3-c7c00ae7216b">
+          <ID>Purchase MONTH</ID>
+          <Name>Purchase MONTH</Name>
+          <SourceAttributeID>Purchase MONTH</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
