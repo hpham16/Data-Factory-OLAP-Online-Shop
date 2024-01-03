@@ -6,4 +6,4 @@ Implemented OLAP (Online Analytical Processing) technology to execute queries an
 
 To enhance efficiency and data analysis capabilities, the team is committed to learning and applying new methods and technologies in the field of data warehousing and OLAP, such as Data Mining and Machine Learning.
 
-Utilized programming tools and languages such as Python and data visualization tool Power BI to create engaging analytical charts and graphs.
+Utilized programming tools and languages such as Python and data visualization tool Power BI to create engaging analytical charts and graphs. And use Random forest, Decision tree, KNN algorithms to classify customers.
