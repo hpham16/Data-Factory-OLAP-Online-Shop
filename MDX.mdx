@@ -1,0 +1,67 @@
+﻿ --	1. Thống kê tổng doanh thu lớn hơn 11000 theo từng phương thức thanh toán vào tháng 1/2022.
+ SELECT NON EMPTY { [Measures].[Revenue Total] } ON COLUMNS, 
+		NON EMPTY { ([Dim Pay method].[Pay Method].[Pay Method].ALLMEMBERS ) }	ON ROWS 
+		FROM ( SELECT ( FILTER([Dim Pay method].[Pay Method].CHILDREN, 
+								[Measures].[Revenue Total] > 11000) ) ON COLUMNS 
+		FROM ( SELECT ([Dim Purchase Date].[Y_M].[Purchase MONTH].&[1]&[2022]) ON COLUMNS 
+		FROM [Online Shop Project]));
+--2. Thống kê tổng thời gian sử dụng trang web của khách hàng từ 18 tuổi trở xuống theo giới tính.
+ SELECT NON EMPTY { [Measures].[Time Spent] } ON COLUMNS, 
+		NON EMPTY { ([Dim Customer].[Gender].[Gender].ALLMEMBERS * [Dim Customer].[Age].[Age].ALLMEMBERS ) } ON ROWS 
+			FROM ( SELECT ( [Dim Customer].[Age].&[0]:[Dim Customer].[Age].&[18] ) ON COLUMNS 
+		FROM [Online Shop Project]);
+--3. Thống kê tổng doanh thu của khách hàng theo độ tuổi.
+ SELECT NON EMPTY { [Measures].[Revenue Total] } ON COLUMNS, 
+	    NON EMPTY [Dim Customer].[Age].CHILDREN ON ROWS 
+		FROM [Online Shop Project];
+--4. Thống kê số lượng nhu cầu sử dụng voucher của khách hàng theo giới tính.
+ SELECT NON EMPTY { [Measures].[Fact Count] } ON COLUMNS, 
+		NON EMPTY { ([Dim Customer].[Gender].[Gender].ALLMEMBERS * [Dim Voucher].[Voucher].[Voucher].ALLMEMBERS ) } ON ROWS 
+		FROM [Online Shop Project];
+--5. Top 3 tháng có giá trị đơn hàng lớn nhất trong năm 2021.
+ SELECT NON EMPTY { [Measures].[GiaTriMuaHangLonNhat] } ON COLUMNS, 
+		NON EMPTY { ([Dim Purchase Date].[Purchase MONTH].[Purchase MONTH].ALLMEMBERS ) } ON ROWS 
+			FROM ( SELECT ( TOPCOUNT([Dim Purchase Date].[Purchase MONTH].CHILDREN, 3,
+									[Measures].[GiaTriMuaHangLonNhat]) ) ON COLUMNS 
+		FROM [Online Shop Project])
+		WHERE ( [Dim Purchase Date].[Purchase YEAR].&[2021] );
+--6. Thống kê số lượng khách hàng trên 18 tuổi có đăng ký sử dụng bản tin.
+ SELECT NON EMPTY { [Measures].[Fact Count] } ON COLUMNS, 
+		NON EMPTY { ([Dim Customer].[Age].[Age].ALLMEMBERS ) } ON ROWS 
+			FROM ( SELECT ( [Dim Customer].[Age].&[19]:[Dim Customer].[Age].&[63] ) ON COLUMNS 
+		FROM [Online Shop Project])
+		WHERE ( [Dim Newsletter].[Newsletter].&[1] );
+--7. Thống kê số thời gian sử dụng trung bình của khách hàng theo từng loại trình duyệt với giới tính là "nữ".
+ SELECT NON EMPTY { [Measures].[AVG_TimeSpent] } ON COLUMNS, 
+		NON EMPTY { ([Dim Browser].[Browser].[Browser].ALLMEMBERS ) } ON ROWS 
+			FROM ( SELECT ( { [Dim Customer].[Gender].&[1] } ) ON COLUMNS 
+		FROM [Online Shop Project]) 
+		WHERE ( [Dim Customer].[Gender].&[1] );
+--8. Thống kê trung bình doanh thu từng đơn hàng theo từng tháng của năm 2021.
+ SELECT NON EMPTY { [Measures].[AVG_Total] } ON COLUMNS, 
+		NON EMPTY { ([Dim Purchase Date].[Purchase MONTH].[Purchase MONTH].ALLMEMBERS ) } ON ROWS 
+		FROM ( SELECT ( { [Dim Purchase Date].[Y_M].[Purchase YEAR].&[2021] } ) ON COLUMNS 
+		FROM [Online Shop Project]) 
+		WHERE ( [Dim Purchase Date].[Y_M].[Purchase YEAR].&[2021] ) ;
+
+--9. Thống kê các phương thức thanh toán có tổng số đơn hàng sử dụng voucher với độ tuổi khách hàng từ 30-40.
+ SELECT NON EMPTY { [Measures].[N Purchases] } ON COLUMNS, 
+		NON EMPTY { ([Dim Pay method].[Pay Method].[Pay Method].ALLMEMBERS * [Dim Customer].[Age].[Age].ALLMEMBERS ) } ON ROWS 
+			FROM ( SELECT ( { [Dim Voucher].[Voucher].&[1] } ) ON COLUMNS 
+			FROM ( SELECT ( [Dim Customer].[Age].&[30]:[Dim Customer].[Age].&[40] ) ON COLUMNS 
+		FROM [Online Shop Project])) WHERE ( [Dim Voucher].[Voucher].&[1] ) ;
+--10. Thống kê số doanh thu trung bình và tổng thời gian sử dụng của chúng trong 10 ngày đầu của tháng 12/2021 theo trình duyệt.
+ SELECT NON EMPTY { [Measures].[AVG_Total], [Measures].[Time Spent] } ON COLUMNS, 
+		NON EMPTY { ([Dim Browser].[Browser].[Browser].ALLMEMBERS * [Dim Purchase Date].[Purchase DATE].[Purchase DATE].ALLMEMBERS ) } ON ROWS 
+			FROM ( SELECT ( { [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[1]&[12]&[2021], 
+							  [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[10]&[12]&[2021], 
+							  [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[2]&[12]&[2021], 
+							  [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[3]&[12]&[2021], 
+							  [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[4]&[12]&[2021], 
+							  [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[5]&[12]&[2021], 
+							  [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[6]&[12]&[2021], 
+							  [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[7]&[12]&[2021], 
+							  [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[8]&[12]&[2021], 
+							  [Dim Purchase Date].[Y_M_D].[Purchase DAY].&[9]&[12]&[2021] } ) ON COLUMNS 
+		FROM [Online Shop Project])
+
